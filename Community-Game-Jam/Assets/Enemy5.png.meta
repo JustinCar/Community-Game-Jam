@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: eba806491da44db4e833b306fc44143c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2406088468938697266
+    second: Enemy5Head
+  - first:
+      213: 4295207965332810817
+    second: Enemy5Crack5
+  - first:
+      213: -8163029678905111169
+    second: Enemy5Crack4
+  - first:
+      213: 2893201099675441776
+    second: Enemy5LeftArm
+  - first:
+      213: -947405786615981321
+    second: Enemy5Body
+  - first:
+      213: -7634678993638591583
+    second: Enemy5RightArm
+  - first:
+      213: 3266455153247471481
+    second: Enemy5Crack3
+  - first:
+      213: -4138271142698827239
+    second: Enemy5Crack2
+  - first:
+      213: -5397763311850250635
+    second: Enemy5LeftLeg
+  - first:
+      213: -4036008544963690904
+    second: Enemy5RightLeg
+  - first:
+      213: -4595734333457795174
+    second: Enemy5Crack1
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy5Head
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2284
+        width: 3118
+        height: 3375
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02172338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4623be39a60da14191936a77d5851f8
+      internalID: 2406088468938697266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Crack5
+      rect:
+        serializedVersion: 2
+        x: 4407
+        y: 3720
+        width: 1042
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dea160e0ba82e44cb7ba02a2ff43ef3
+      internalID: 4295207965332810817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Crack4
+      rect:
+        serializedVersion: 2
+        x: 4989
+        y: 2359
+        width: 845
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d183ce9f616d84b4a9016bfbc41e2652
+      internalID: -8163029678905111169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5LeftArm
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1205
+        width: 639
+        height: 420
+      alignment: 9
+      pivot: {x: 0.92423177, y: 0.76404333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db75ddd7010f5e64397b11f1ce74cc27
+      internalID: 2893201099675441776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Body
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 560
+        width: 1428
+        height: 1219
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.97508985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5d5a2c20145d546a355bf8fe0004ca
+      internalID: -947405786615981321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5RightArm
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 1426
+        width: 615
+        height: 412
+      alignment: 9
+      pivot: {x: 0.07924844, y: 0.6495388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8c4f7d7ae257f4e8576c1ceae8c056
+      internalID: -7634678993638591583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Crack3
+      rect:
+        serializedVersion: 2
+        x: 4227
+        y: 1600
+        width: 401
+        height: 714
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffe02cd79fda8541beb19f1af28d965
+      internalID: 3266455153247471481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Crack2
+      rect:
+        serializedVersion: 2
+        x: 5122
+        y: 1130
+        width: 661
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0ae41fc34cb754d9cb9e1253fd7a0b
+      internalID: -4138271142698827239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 131
+        width: 329
+        height: 545
+      alignment: 9
+      pivot: {x: 0.72471756, y: 0.8843561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703d678605b399849abe97ae27b53d37
+      internalID: -5397763311850250635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5RightLeg
+      rect:
+        serializedVersion: 2
+        x: 2897
+        y: 218
+        width: 407
+        height: 546
+      alignment: 9
+      pivot: {x: 0.13669716, y: 0.9062197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33ba7f6567255a47a627e422bde5cb9
+      internalID: -4036008544963690904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy5Crack1
+      rect:
+        serializedVersion: 2
+        x: 4052
+        y: 367
+        width: 945
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6639288e9f9e54a9c89daa56640643
+      internalID: -4595734333457795174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
