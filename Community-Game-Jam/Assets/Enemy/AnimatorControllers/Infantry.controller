@@ -93,9 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6198ec2b0fcc83545aa4237f5bd45193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  attackDistance: 1
-  explode: {fileID: 3026875702075281202, guid: cee236ae118ac0c46a7e3e828757cbad, type: 3}
+  speed: 0.6
+  attackDistance: 10
 --- !u!1102 &-3993585648579245668
 AnimatorState:
   serializedVersion: 5
@@ -243,7 +242,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie
+  m_Name: Infantry
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isChasing
@@ -251,19 +250,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isWandering
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

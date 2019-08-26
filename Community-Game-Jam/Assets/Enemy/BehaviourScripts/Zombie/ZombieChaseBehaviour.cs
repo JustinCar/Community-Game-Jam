@@ -7,7 +7,7 @@ public class ZombieChaseBehaviour : StateMachineBehaviour
     private Transform playerPos;
     public float speed;
     public float attackDistance;
-    public ParticleSystem explode;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -25,8 +25,7 @@ public class ZombieChaseBehaviour : StateMachineBehaviour
 
         if (Vector2.Distance(animator.transform.position, playerPos.transform.position) < attackDistance) 
         {
-           Instantiate(explode, animator.transform.position, explode.transform.rotation);
-           Destroy(animator.gameObject);
+           animator.SetBool("isAttacking", true);
         }
     }
 

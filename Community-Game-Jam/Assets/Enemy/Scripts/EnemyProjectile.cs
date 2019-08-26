@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     public int damage;
     public Rigidbody2D rb;
@@ -23,16 +23,16 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D (Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Player") 
+        if (collision.gameObject.tag == "Enemy") 
         {
             return;
         }
 
         // Play hit audio
 
-        if (collision.gameObject.tag == "Enemy") 
+        if (collision.gameObject.tag == "Player") 
         {
-            collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+            collision.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
             Destroy(gameObject);
             // Play Hit Particle Effects
         } else if (collision.gameObject.tag == "Terrain") 
@@ -40,6 +40,5 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
             // Play Hit Particle Effects
         }
-
     }
 }
