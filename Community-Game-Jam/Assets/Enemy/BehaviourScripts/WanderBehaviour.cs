@@ -41,10 +41,6 @@ public class WanderBehaviour : StateMachineBehaviour
         transform.position, spots.wanderPoints[nextSpot].position) > 0.2f) 
         {
             animator.transform.position = Vector2.MoveTowards(animator.transform.position, spots.wanderPoints[nextSpot].position, speed * Time.deltaTime);
-            Vector2 direction = new Vector2(spots.wanderPoints[nextSpot].position.x - animator.transform.position.x, 
-            spots.wanderPoints[nextSpot].position.y - animator.transform.position.y);
-
-            animator.transform.right = direction;
         }
         else 
         {

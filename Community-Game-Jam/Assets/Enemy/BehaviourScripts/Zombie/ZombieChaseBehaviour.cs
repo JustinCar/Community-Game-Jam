@@ -17,10 +17,6 @@ public class ZombieChaseBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector2 direction = new Vector2(playerPos.transform.position.x - animator.transform.position.x, 
-        playerPos.transform.position.y - animator.transform.position.y);
-
-        animator.transform.right = direction;
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
 
         if (Vector2.Distance(animator.transform.position, playerPos.transform.position) < attackDistance) 
