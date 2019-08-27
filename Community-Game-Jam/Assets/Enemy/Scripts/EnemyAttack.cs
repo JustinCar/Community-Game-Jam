@@ -13,6 +13,8 @@ public class EnemyAttack : MonoBehaviour
     public GameObject projectile;
     public GameObject firePos;
 
+    public float shootOffset;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,10 +41,10 @@ public class EnemyAttack : MonoBehaviour
     public void shoot() 
     {
         Vector2 shootDirection = new Vector2(playerHealth.gameObject.transform.position.x - transform.position.x, 
-        playerHealth.gameObject.transform.position.y - transform.position.y);
+        playerHealth.gameObject.transform.position.y - transform.position.y).normalized;
 
-        GameObject newProjectile = Instantiate(projectile, firePos.transform.position, transform.rotation);
-        newProjectile.GetComponent<Projectile>().direction = shootDirection;
+        GameObject newProjectile = Instantiate(projectile, firePos.transform.position+ new Vector3(shootDirection.x * shootOffset, shootDirection.y * shootOffset, 0).normalized, transform.rotation);
+        newProjectile.GetComponent<EnemyProjectile>().direction = shootDirection;
     }
 
     public void attackFinished () 

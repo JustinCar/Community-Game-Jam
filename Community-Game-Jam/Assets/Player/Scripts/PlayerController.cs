@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
+    public float shootOffset;
+
     Vector3 mousePos = Vector3.zero;
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+            anim.SetBool("isAttacking", true);
         }
     }
 
@@ -55,12 +58,17 @@ public class PlayerController : MonoBehaviour
     public void shoot() 
     {
             Vector2 shootDirection = new Vector2(mousePos.x - transform.position.x, 
-            mousePos.y - transform.position.y);
+            mousePos.y - transform.position.y).normalized;
 
-            GameObject newProjectile = Instantiate(projectile, firePos.transform.position, transform.rotation);
+            GameObject newProjectile = Instantiate(projectile, firePos.transform.position + new Vector3(shootDirection.x * shootOffset, shootDirection.y * shootOffset, 0).normalized , transform.rotation);
             newProjectile.GetComponent<Projectile>().direction = shootDirection;
 
             shootTime = 0.0f;
             mousePos = Vector3.zero;
+    }
+
+    public void finishAttack() 
+    {
+        anim.SetBool("isAttacking", false);
     }
 }

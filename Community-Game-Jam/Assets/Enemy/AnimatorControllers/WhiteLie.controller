@@ -54,8 +54,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroDistance: 3
-  timeToSpendIdleLowerBound: 5
-  timeToSpendIdleUpperBound: 10
+  timeToSpendIdleLowerBound: 3
+  timeToSpendIdleUpperBound: 6
 --- !u!1101 &-5639714794997874324
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6198ec2b0fcc83545aa4237f5bd45193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  attackDistance: 3
+  speed: 4
+  attackDistance: 1.6
 --- !u!1102 &-3993585648579245668
 AnimatorState:
   serializedVersion: 5
@@ -175,7 +175,7 @@ AnimatorStateMachine:
     m_Position: {x: 280, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3993585648579245668}
-    m_Position: {x: 490, y: -110, z: 0}
+    m_Position: {x: 520, y: -130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2102543432365612158}
     m_Position: {x: 480, y: 210, z: 0}
@@ -205,9 +205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aggroDistance: 3
-  speed: 0.2
-  timeToSpendWanderingLowerBound: 2
-  timeToSpendWanderingUpperBound: 4
+  speed: 0.3
+  timeToSpendWanderingLowerBound: 5
+  timeToSpendWanderingUpperBound: 8
 --- !u!1102 &-1254145721822401230
 AnimatorState:
   serializedVersion: 5
@@ -242,7 +242,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Juggernaut
+  m_Name: WhiteLie
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isChasing
@@ -334,7 +334,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wander
-  m_Speed: 0.1
+  m_Speed: 0.2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1675477051498128217}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6131449276753518797}
   - component: {fileID: 7107588029567459907}
   - component: {fileID: 3392029276765064128}
-  - component: {fileID: 3917003366594063549}
+  - component: {fileID: 648249131375693906}
   - component: {fileID: 3582238507967395724}
   - component: {fileID: 4251265485370188132}
   m_Layer: 0
@@ -81,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3917003366594063549
+--- !u!114 &648249131375693906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,10 +90,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4999144409273774409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b97df37b3d52c843aa59bb94ba5a3a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 264e9fd6492525842b0b4fca722f1b1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 20
   rb: {fileID: 3582238507967395724}
   moveSpeed: 3
   direction: {x: 0, y: 0}

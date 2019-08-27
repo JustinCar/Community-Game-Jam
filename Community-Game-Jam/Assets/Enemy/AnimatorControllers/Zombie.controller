@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  attackDistance: 1
+  attackDistance: 1.8
 --- !u!1102 &-3993585648579245668
 AnimatorState:
   serializedVersion: 5
@@ -230,7 +230,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 354ca765b4d1adc4abdaf0c53bbeacfd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
