@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float shootOffset;
 
     Vector3 mousePos = Vector3.zero;
+
+    public GameObject checkpoint;
     // Start is called before the first frame update
     void Start()
     {

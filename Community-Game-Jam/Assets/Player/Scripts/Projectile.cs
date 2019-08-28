@@ -39,7 +39,19 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
             // Play Hit Particle Effects
+        } else if (collision.gameObject.tag == "BoldFacedLie") 
+        {
+            collision.gameObject.GetComponent<BoldFacedLie>().takeDamage(damage);
+            Destroy(gameObject);
         }
+    }
 
+    void OnTriggerEnter2D (Collider2D collision) 
+    {
+        if (collision.gameObject.tag == "EnemyProjectile") 
+        {
+            Destroy(gameObject);
+            // Play Hit Particle Effects
+        }
     }
 }

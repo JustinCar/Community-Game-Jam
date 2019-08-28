@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - WanderSpots
   - BossHealthBar
+  - EnemyProjectile
+  - BoldFacedLie
   layers:
   - Default
   - TransparentFX
