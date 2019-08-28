@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoldFacedLie : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BoldFacedLie : MonoBehaviour
     GameObject player;
     public Rigidbody2D rb;
     public float speed1;
+    public int startingHealth;
     public int health1;
     public int health2;
     public int health3;
@@ -22,10 +24,19 @@ public class BoldFacedLie : MonoBehaviour
     public List<LetterProjectile> projectiles;
     public List<LetterProjectile> projectilesShot;
 
+    public Slider healthBar1;
+    public Slider healthBar2;
+    public Slider healthBar3;
+    public GameObject healthBars;
+    public GameObject body;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        health1 = startingHealth;
+        health2 = startingHealth;
+        health3 = startingHealth;
     }
 
     // Update is called once per frame
@@ -45,6 +56,24 @@ public class BoldFacedLie : MonoBehaviour
 
         }
 
+    }
+
+    void death () 
+    {
+        body.GetComponent<Animator>().SetBool("Dead", true);
+        healthBars.SetActive(false);
+    }
+
+    public void shootAllProjectiles() 
+    {
+        foreach (LetterProjectile p in projectilesShot) 
+        {
+            p.shoot(2);
+        } 
+        foreach (LetterProjectile p in projectiles) 
+        {
+            p.shoot(2);
+        } 
     }
 
     void attack () 
@@ -103,6 +132,7 @@ public class BoldFacedLie : MonoBehaviour
     public void beginStage1 () 
     {
         stage = 1;
+        healthBars.SetActive(true);
         recallProjectiles();
     }
 
@@ -119,6 +149,8 @@ public class BoldFacedLie : MonoBehaviour
         if (stage == 1) 
         {
             health1 -= damage;
+            healthBar1.value = health1;
+          
             if (health1 <= 0) 
             {
                 stage = 2;
@@ -126,6 +158,8 @@ public class BoldFacedLie : MonoBehaviour
         } else if (stage == 2) 
         {
             health2 -= damage;
+            healthBar2.value = health2;
+
             if (health2 <= 0) 
             {
                 stage = 3;
@@ -133,9 +167,12 @@ public class BoldFacedLie : MonoBehaviour
         } else if (stage == 3) 
         {
             health3 -= damage;
+            healthBar3.value = health3;
+
             if (health3 <= 0) 
             {
                 dead = true;
+                death();
             }
         }
     }

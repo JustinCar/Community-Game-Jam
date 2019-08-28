@@ -14,9 +14,20 @@ public class EnablePupils : MonoBehaviour
         left.SetActive(true);
     }
 
+    public void disablePupils() 
+    {
+        right.SetActive(false);
+        left.SetActive(false);
+    }
+
     public void recallProjectiles() 
     {
         controller.recallProjectiles();
+    }
+
+    public void death() 
+    {
+        controller.shootAllProjectiles();
     }
 
     public void beginStageOne() 
