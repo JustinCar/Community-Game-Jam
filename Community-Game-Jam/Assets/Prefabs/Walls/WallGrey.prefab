@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7259775983325084040}
   - component: {fileID: 7096499332268746509}
   - component: {fileID: 2537451173091649330}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallGrey
   m_TagString: Terrain
   m_Icon: {fileID: 0}

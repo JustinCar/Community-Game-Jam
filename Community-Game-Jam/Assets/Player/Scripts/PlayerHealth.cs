@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth;
     public int currentHealth;
 
+    public Slider healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -14,15 +16,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void takeDamage (int amount) 
     {
         currentHealth -= amount;
+        healthBar.value -= amount;
         if (currentHealth <= 0) 
         {
             die();

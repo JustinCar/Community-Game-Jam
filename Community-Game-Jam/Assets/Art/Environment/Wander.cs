@@ -10,8 +10,8 @@ public class Wander : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        goal.x = Random.Range(-offset, offset);
-        goal.y = Random.Range(-offset, offset); 
+        goal.x = Random.Range(transform.position.x - offset, transform.position.x + offset);
+        goal.y = Random.Range(transform.position.y - offset, transform.position.y + offset); 
     }
 
     // Update is called once per frame
@@ -23,8 +23,8 @@ public class Wander : MonoBehaviour
         }
         else 
         {
-            goal.x = Random.Range(-offset, offset);
-            goal.y = Random.Range(-offset, offset);
+            goal.x = Random.Range(transform.position.x - offset, transform.position.x + offset);
+            goal.y = Random.Range(transform.position.y - offset, transform.position.y + offset); 
         }
     }
 }

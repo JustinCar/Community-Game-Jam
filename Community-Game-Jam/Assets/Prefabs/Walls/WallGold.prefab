@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 766940993943596482}
   - component: {fileID: 3866061305529332595}
   - component: {fileID: 304138489617659488}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallGold
   m_TagString: Terrain
   m_Icon: {fileID: 0}

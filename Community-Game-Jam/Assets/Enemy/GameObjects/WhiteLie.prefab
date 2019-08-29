@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758082034696371806}
   - component: {fileID: 3758082034696371807}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerRightLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758082034965284639}
   - component: {fileID: 3758082034965284636}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerLeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758082035264992308}
   - component: {fileID: 3758082035264992309}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerLeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758082035757369864}
   - component: {fileID: 3758082035757369865}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerRightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,8 @@ GameObject:
   - component: {fileID: 8452826440066650506}
   - component: {fileID: 8452826440066650507}
   - component: {fileID: 8452826440066650508}
-  m_Layer: 9
+  - component: {fileID: 1720925344}
+  m_Layer: 10
   m_Name: WhiteLie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -415,8 +416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ac6207ee9da8c4eb67f69f5b3dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 50
   explode: {fileID: 3026875702075281202, guid: 19a937edd30ce554b8b8505560cbba3f, type: 3}
+  isWhiteLie: 0
 --- !u!114 &8452826440066650507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +454,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -1.5}
   m_Size: {x: 7.82, y: 15.2}
   m_Direction: 0
+--- !u!114 &1720925344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3758082036219263026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117deaa1e48d2f64aaa83ee2d1315efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bar1: {fileID: 0}
+  bar2: {fileID: 0}
+  bar3: {fileID: 0}
+  stage: 0
+  explode: {fileID: 3026875702075281202, guid: 19a937edd30ce554b8b8505560cbba3f, type: 3}
 --- !u!1 &3758082036554147328
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3758082036554147329}
   - component: {fileID: 3758082036554147342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5169206386055036152}
   - component: {fileID: 7269162512643953905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LightShaddow_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3242073439162614247}
   - component: {fileID: 7202506153343338918}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}

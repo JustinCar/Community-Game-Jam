@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8332875765658810395}
   - component: {fileID: 3791561955457207906}
   - component: {fileID: 6561212292479679883}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WallBlue
   m_TagString: Terrain
   m_Icon: {fileID: 0}

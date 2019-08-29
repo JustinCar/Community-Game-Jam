@@ -31,8 +31,14 @@ public class Projectile : MonoBehaviour
         // Play hit audio
 
         if (collision.gameObject.tag == "Enemy") 
-        {
-            collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+        {   
+            // Projectile can pass through white lies
+            if (collision.gameObject.layer == 10) 
+            {
+                collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
+                return;
+            }
+            
             Destroy(gameObject);
             // Play Hit Particle Effects
         } else if (collision.gameObject.tag == "Terrain") 
