@@ -29,6 +29,7 @@ public class BoldFacedLie : MonoBehaviour
     public Slider healthBar3;
     public GameObject healthBars;
     public GameObject body;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class BoldFacedLie : MonoBehaviour
         health1 = startingHealth;
         health2 = startingHealth;
         health3 = startingHealth;
+        audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -108,6 +110,7 @@ public class BoldFacedLie : MonoBehaviour
                 projectiles.Remove(closest);
                 projectilesShot.Add(closest);
                 closest.shoot(stage);
+                audio.playAudio(14);
                 timer1 = 0;                        
             }
 
@@ -138,6 +141,7 @@ public class BoldFacedLie : MonoBehaviour
 
     public void recallProjectiles() 
     {
+        audio.playAudio(12);
         foreach (LetterProjectile p in projectiles) 
         {
             p.recall();
@@ -153,6 +157,7 @@ public class BoldFacedLie : MonoBehaviour
           
             if (health1 <= 0) 
             {
+                audio.playAudio(13);
                 stage = 2;
             }
         } else if (stage == 2) 
@@ -162,15 +167,17 @@ public class BoldFacedLie : MonoBehaviour
 
             if (health2 <= 0) 
             {
+                audio.playAudio(13);
                 stage = 3;
             }
-        } else if (stage == 3) 
+        } else if (stage == 3 && !dead) 
         {
             health3 -= damage;
             healthBar3.value = health3;
 
             if (health3 <= 0) 
             {
+                audio.playAudio(13);
                 dead = true;
                 death();
             }

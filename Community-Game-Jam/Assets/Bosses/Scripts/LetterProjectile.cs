@@ -21,11 +21,13 @@ public class LetterProjectile : MonoBehaviour
     int stage;
 
     public Transform slot;
+    AudioManager audio;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim.enabled = false;
+        audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -85,11 +87,13 @@ public class LetterProjectile : MonoBehaviour
             if (timer > damageCoolDown) 
             {
                 Debug.Log("PLAYER HIT");
+                audio.playAudio(11);
                 collision.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
                 timer = 0;
             }
         } else if (collision.tag == "Terrain" && attacking) 
         {
+            audio.playAudio(2);
             rb.velocity = Vector2.zero;
             attacking = false;
             anim.enabled = false;

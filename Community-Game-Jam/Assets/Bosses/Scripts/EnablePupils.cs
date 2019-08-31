@@ -8,6 +8,16 @@ public class EnablePupils : MonoBehaviour
     public GameObject right;
     public BoldFacedLie controller;
     public Animator animator;
+    public GameObject block;
+
+    StoryAudioManager audio;
+    bool triggered = false;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        audio = GameObject.FindGameObjectWithTag("StoryAudioManager").GetComponent<StoryAudioManager>();
+    }
     public void enablePupils() 
     {
         right.SetActive(true);
@@ -28,6 +38,8 @@ public class EnablePupils : MonoBehaviour
     public void death() 
     {
         controller.shootAllProjectiles();
+        block.SetActive(false); 
+        audio.playAudio(7);
     }
 
     public void beginStageOne() 
@@ -37,9 +49,12 @@ public class EnablePupils : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D collision) 
     {
-        if (collision.tag == "Player") 
+        if (collision.tag == "Player" && !triggered) 
         {
-            animator.enabled = true;  
+            triggered = true;
+            audio.playAudio(3);
+            animator.enabled = true; 
+            block.SetActive(true); 
         }
         
     }

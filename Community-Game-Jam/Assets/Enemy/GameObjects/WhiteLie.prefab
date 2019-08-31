@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3018285511750743188}
-  damage: 25
+  damage: 10
   explode: {fileID: 3026875702075281202, guid: 19a937edd30ce554b8b8505560cbba3f, type: 3}
   projectile: {fileID: 4999144409273774409, guid: 4ecb6d8f6f5f6e94bb3273bdabba73f6,
     type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3582238507967395724}
   - component: {fileID: 7722040644682164012}
   - component: {fileID: 1615722459068770958}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,8 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   rb: {fileID: 3582238507967395724}
-  moveSpeed: 3
+  moveSpeed: 5
   direction: {x: 0, y: 0}
+  explode: {fileID: 3026875702075281202, guid: 6fa082d7d05add540ab39374de50be1c, type: 3}
 --- !u!50 &3582238507967395724
 Rigidbody2D:
   serializedVersion: 4
@@ -130,7 +131,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

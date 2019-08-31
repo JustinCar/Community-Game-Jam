@@ -7,11 +7,20 @@ public class ZombieChaseBehaviour : StateMachineBehaviour
     private Transform playerPos;
     public float speed;
     public float attackDistance;
+    public float radius;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+
+        Collider[] hitColliders = Physics.OverlapSphere(animator.transform.position, radius, 9);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            hitColliders[i].GetComponent<Animator>().SetBool("isChasing", true);
+            i++;
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

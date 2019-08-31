@@ -256,8 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ac6207ee9da8c4eb67f69f5b3dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 50
   explode: {fileID: 3026875702075281202, guid: 55078557c6686cf45835b659ee5713d1, type: 3}
+  isWhiteLie: 0
 --- !u!114 &855001095
 MonoBehaviour:
   m_ObjectHideFlags: 0

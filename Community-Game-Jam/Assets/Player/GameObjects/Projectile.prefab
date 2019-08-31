@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4754335662861062819}
   - component: {fileID: 6203812537927925597}
   - component: {fileID: 6443178051224389080}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ MonoBehaviour:
   rb: {fileID: 3582238507967395724}
   moveSpeed: 7
   direction: {x: 0, y: 0}
+  explode: {fileID: 3026875702075281202, guid: a78a647e15fb92749b84aaa29f665e03, type: 3}
 --- !u!50 &3582238507967395724
 Rigidbody2D:
   serializedVersion: 4

@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4bc30881aa2ae54f85d206b89d32524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroDistance: 3
+  aggroDistance: 20
   timeToSpendIdleLowerBound: 3
   timeToSpendIdleUpperBound: 6
 --- !u!1101 &-5639714794997874324
@@ -93,8 +93,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6198ec2b0fcc83545aa4237f5bd45193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 4
   attackDistance: 1.8
+  radius: 5
 --- !u!1102 &-3993585648579245668
 AnimatorState:
   serializedVersion: 5
@@ -204,10 +205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdc2de58b62345448ed82d635baa956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroDistance: 3
+  aggroDistance: 20
   speed: 0.3
   timeToSpendWanderingLowerBound: 5
   timeToSpendWanderingUpperBound: 8
+  offset: 2
 --- !u!1102 &-1254145721822401230
 AnimatorState:
   serializedVersion: 5

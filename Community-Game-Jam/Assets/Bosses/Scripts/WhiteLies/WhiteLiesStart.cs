@@ -11,6 +11,14 @@ public class WhiteLiesStart : MonoBehaviour
     public GameObject exitBlock;
     public Slider barThree;
 
+    StoryAudioManager audio;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        audio = GameObject.FindGameObjectWithTag("StoryAudioManager").GetComponent<StoryAudioManager>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +34,7 @@ public class WhiteLiesStart : MonoBehaviour
     {
         if (collision.tag == "Player") 
         {            
+            audio.playAudio(6);
             barThree.transform.parent.gameObject.SetActive(true);
             foreach (WhiteLieSpawner s in spawners) 
             {

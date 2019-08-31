@@ -8,11 +8,13 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed;
     public Vector2 direction;
+    AudioManager audio;
+    public ParticleSystem explode;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        // Play hit audio
+        audio.playAudio(10);
 
         if (collision.gameObject.tag == "Enemy") 
         {   
@@ -38,16 +40,17 @@ public class Projectile : MonoBehaviour
                 collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
                 return;
             }
-            
+            Instantiate(explode, transform.position, explode.transform.rotation);
+            collision.gameObject.GetComponent<EnemyHealth>().takeDamage(damage);
             Destroy(gameObject);
-            // Play Hit Particle Effects
         } else if (collision.gameObject.tag == "Terrain") 
         {
+            Instantiate(explode, transform.position, explode.transform.rotation);
             Destroy(gameObject);
-            // Play Hit Particle Effects
         } else if (collision.gameObject.tag == "BoldFacedLie") 
         {
             collision.gameObject.GetComponent<BoldFacedLie>().takeDamage(damage);
+            Instantiate(explode, transform.position, explode.transform.rotation);
             Destroy(gameObject);
         }
     }

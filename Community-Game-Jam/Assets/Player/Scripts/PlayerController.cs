@@ -19,10 +19,16 @@ public class PlayerController : MonoBehaviour
 
     Vector3 mousePos = Vector3.zero;
 
-    public GameObject checkpoint;
+    CheckpointManager manager;
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("CheckpointManager").GetComponent<CheckpointManager>();
+
+        if (manager.checkpoint != Vector2.zero) 
+        {
+            transform.position = manager.checkpoint;
+        }
         
     }
 

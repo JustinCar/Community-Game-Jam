@@ -9,21 +9,23 @@ public class WanderBehaviour : StateMachineBehaviour
     public float aggroDistance;
     public float speed;
 
-    private WanderSpots spots;
-    private int nextSpot;
-
     public float timeToSpendWanderingLowerBound;
     public float timeToSpendWanderingUpperBound;
     private float timer = 0.0f;
     private float timeToSpendWandering = 0.0f;
+
+    Vector2 goal;
+    Vector2 originalPosition;
+    public float offset;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer = 0.0f;
         timeToSpendWandering = Random.Range(timeToSpendWanderingLowerBound, timeToSpendWanderingUpperBound);
-        spots = GameObject.FindGameObjectWithTag("WanderSpots").GetComponent<WanderSpots>();
-        nextSpot = Random.Range(0, spots.wanderPoints.Count);
+        originalPosition = animator.transform.position;
+        goal.x = Random.Range(originalPosition.x - offset, originalPosition.x + offset);
+        goal.y = Random.Range(originalPosition.y - offset, originalPosition.y + offset); 
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -38,13 +40,14 @@ public class WanderBehaviour : StateMachineBehaviour
         }
 
         if (Vector2.Distance(animator.
-        transform.position, spots.wanderPoints[nextSpot].position) > 0.2f) 
+        transform.position, goal) > 0.2f) 
         {
-            animator.transform.position = Vector2.MoveTowards(animator.transform.position, spots.wanderPoints[nextSpot].position, speed * Time.deltaTime);
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, goal, speed * Time.deltaTime);
         }
         else 
         {
-            nextSpot = Random.Range(0, spots.wanderPoints.Count);
+            goal.x = Random.Range(originalPosition.x - offset, originalPosition.x + offset);
+            goal.y = Random.Range(originalPosition.y - offset, originalPosition.y + offset); 
         }
 
         if (timer > timeToSpendWandering) 

@@ -46,9 +46,10 @@ MonoBehaviour:
   whiteLie: {fileID: 3758082036219263026, guid: b882ebc16ab056f4f96eeee2b1df122b,
     type: 3}
   stage: 0
-  stageOneCooldown: 9
-  stageTwoCooldown: 6
-  stageThreeCooldown: 4
+  stageOneCooldown: 11
+  stageTwoCooldown: 9
+  stageThreeCooldown: 8
+  timer: 0
   barOne: {fileID: 0}
   barTwo: {fileID: 0}
   barThree: {fileID: 0}

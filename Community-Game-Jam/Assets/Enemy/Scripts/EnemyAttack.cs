@@ -14,11 +14,13 @@ public class EnemyAttack : MonoBehaviour
     public GameObject firePos;
 
     public float shootOffset;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        audio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -28,11 +30,20 @@ public class EnemyAttack : MonoBehaviour
 
     public void meleeAttack() 
     {
+        if (gameObject.layer == 10) 
+        {
+            audio.playAudio(6);
+        } else 
+        {
+            audio.playAudio(4);  
+        }
+        
         playerHealth.takeDamage(damage);
     }
 
     public void kamikazeAttack() 
     {
+        audio.playAudio(6);
         playerHealth.takeDamage(damage);
         Instantiate(explode, transform.position, explode.transform.rotation);
         Destroy(gameObject);

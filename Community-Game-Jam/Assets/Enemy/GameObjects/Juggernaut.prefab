@@ -253,8 +253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ac6207ee9da8c4eb67f69f5b3dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 500
   explode: {fileID: 3026875702075281202, guid: 6fa082d7d05add540ab39374de50be1c, type: 3}
+  isWhiteLie: 0
 --- !u!114 &671611726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 284613963411137313}
-  damage: 25
+  damage: 300
   explode: {fileID: 3026875702075281202, guid: 6fa082d7d05add540ab39374de50be1c, type: 3}
   projectile: {fileID: 4999144409273774409, guid: 4ecb6d8f6f5f6e94bb3273bdabba73f6,
     type: 3}
